@@ -20,8 +20,8 @@
           "startDate": "2024-11",
           "endDate": null,
           "highlights": [
-            "Collaborated with CTO and CPO to define product roadmap and led the frontend team in executing it across 6 products — POS system, admin dashboard, QR menu, payment gateway, partner portal, and marketing website",
-            "Managed senior and mid-level developers — code reviews, deployments, task delegation, and sprint planning"
+            "Collaborated with CTO and CPO to define product roadmap and led the frontend team in executing it across 6 products - POS system, admin dashboard, QR menu, payment gateway, partner portal, and marketing website",
+            "Managed senior and mid-level developers - code reviews, deployments, task delegation, and sprint planning"
           ]
         },
         {
@@ -45,7 +45,7 @@
         "Led full refactor of a WordPress plugin serving 13,000+ customers from legacy jQuery/MVC/PHP to React, Vite, Module SCSS, and REST API architecture",
         "Built a plugin extension system from scratch, enabling modular feature development and third-party integrations with 20+ APIs",
         "Created custom rich text editor plugins for functionality not available in existing libraries",
-        "Shipped the refactored product to production in 4–5 months while maintaining the legacy version in parallel",
+        "Shipped the refactored product to production in 4-5 months while maintaining the legacy version in parallel",
         "Mentored 1 junior and 2 mid-level engineers through code reviews, documentation standards, and Git branching strategy"
       ]
     },
@@ -58,7 +58,7 @@
           "startDate": "2021-05",
           "endDate": "2023-07",
           "highlights": [
-            "Built Planly — a social media automation SaaS — from concept to production: assembled a team of 4 engineers (1 senior, 3 mid), co-owned the product roadmap with PO, and shipped a production-ready MVP in under 5 months",
+            "Built Planly - a social media automation SaaS - from concept to production: assembled a team of 4 engineers (1 senior, 3 mid), co-owned the product roadmap with PO, and shipped a production-ready MVP in under 5 months",
             "Chose and implemented the technical architecture for Planly: React with modular CSS on the frontend, C# and Go on the backend",
             "Led both frontend and backend teams, performing code reviews across 2+ languages and managing deployments for 13,000+ plugin customers"
           ]
@@ -103,7 +103,7 @@
     {
       "name": "Planly",
       "url": "https://planly.com",
-      "description": "Social media automation SaaS — built from scratch as technical lead",
+      "description": "Social media automation SaaS - built from scratch as technical lead",
       "highlights": [
         "Assembled team, co-owned roadmap with PO, shipped production-ready MVP in under 5 months",
         "Tech stack: React, Module CSS, C#, Go"
@@ -135,7 +135,7 @@
       "highlights": [
         "Built with React Native/Expo, Firebase, Cloudflare R2, and Docker-based serverless AI inference",
         "Designed and implemented custom UI component library from scratch",
-        "Created and open-sourced expo-keychain (npmjs.com/package/expo-keychain) — Expo module for iOS Keychain integration"
+        "Created and open-sourced expo-keychain (npmjs.com/package/expo-keychain) - Expo module for iOS Keychain integration"
       ]
     }
   ],
