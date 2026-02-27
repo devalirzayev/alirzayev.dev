@@ -1,0 +1,24 @@
+---
+interface LangItem {
+  language: string;
+  fluency: string;
+}
+
+interface Props {
+  languages: LangItem[];
+}
+
+const { languages } = Astro.props;
+---
+
+<section class="mt-6">
+  <h2 class="text-xs font-semibold uppercase tracking-widest text-[var(--color-muted)] dark:text-[var(--color-muted-dark)] border-b border-[var(--color-border)] dark:border-[var(--color-border-dark)] pb-2 mb-3">Languages</h2>
+  <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm">
+    {languages.map((lang) => (
+      <span>
+        <span class="font-semibold">{lang.language}</span>
+        <span class="text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]"> — {lang.fluency}</span>
+      </span>
+    ))}
+  </div>
+</section>

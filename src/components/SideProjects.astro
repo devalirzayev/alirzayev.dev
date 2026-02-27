@@ -1,0 +1,28 @@
+---
+interface SideProjectItem {
+  name: string;
+  description: string;
+  highlights: string[];
+}
+
+interface Props {
+  sideProjects: SideProjectItem[];
+}
+
+const { sideProjects } = Astro.props;
+---
+
+<section class="mt-6">
+  <h2 class="text-xs font-semibold uppercase tracking-widest text-[var(--color-muted)] dark:text-[var(--color-muted-dark)] border-b border-[var(--color-border)] dark:border-[var(--color-border-dark)] pb-2 mb-3">Side Projects</h2>
+  <div class="space-y-4">
+    {sideProjects.map((project) => (
+      <div>
+        <h3 class="font-semibold text-sm">{project.name}</h3>
+        <p class="text-sm text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">{project.description}</p>
+        <ul class="mt-1.5 space-y-1 text-sm list-disc list-outside ml-4">
+          {project.highlights.map((h) => <li>{h}</li>)}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>

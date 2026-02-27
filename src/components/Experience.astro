@@ -1,0 +1,89 @@
+---
+interface Role {
+  position: string;
+  startDate: string;
+  endDate: string | null;
+  highlights: string[];
+}
+
+interface ExperienceItem {
+  company: string;
+  location: string;
+  position?: string;
+  startDate?: string;
+  endDate?: string | null;
+  highlights?: string[];
+  roles?: Role[];
+}
+
+interface Props {
+  experience: ExperienceItem[];
+}
+
+const { experience } = Astro.props;
+
+function formatDate(date: string | null): string {
+  if (!date) return 'Present';
+  const [year, month] = date.split('-');
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return `${months[parseInt(month) - 1]} ${year}`;
+}
+
+function getRoles(job: ExperienceItem): Role[] {
+  if (job.roles) return job.roles;
+  return [{
+    position: job.position!,
+    startDate: job.startDate!,
+    endDate: job.endDate ?? null,
+    highlights: job.highlights || [],
+  }];
+}
+
+function getOverallDates(job: ExperienceItem): { start: string; end: string | null } {
+  if (!job.roles) return { start: job.startDate!, end: job.endDate ?? null };
+  const starts = job.roles.map(r => r.startDate).sort();
+  const ends = job.roles.map(r => r.endDate);
+  return {
+    start: starts[0],
+    end: ends.includes(null) ? null : ends.sort().reverse()[0],
+  };
+}
+---
+
+<section class="mt-6">
+  <h2 class="text-xs font-semibold uppercase tracking-widest text-[var(--color-muted)] dark:text-[var(--color-muted-dark)] border-b border-[var(--color-border)] dark:border-[var(--color-border-dark)] pb-2 mb-3">Experience</h2>
+  <div class="space-y-5">
+    {experience.map((job) => {
+      const roles = getRoles(job);
+      const dates = getOverallDates(job);
+      const isGrouped = roles.length > 1;
+      return (
+        <div>
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+            <p class="font-semibold text-sm">{job.company} · {job.location}</p>
+            <span class="text-xs text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">
+              {formatDate(dates.start)} — {formatDate(dates.end)}
+            </span>
+          </div>
+          <div class={isGrouped ? 'mt-2 space-y-3' : ''}>
+            {roles.map((role) => (
+              <div>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                  <h3 class={`text-sm ${isGrouped ? 'text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]' : 'font-semibold'}`}>{role.position}</h3>
+                  {isGrouped && (
+                    <span class="text-xs text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">
+                      {formatDate(role.startDate)} — {formatDate(role.endDate)}
+                    </span>
+                  )}
+                </div>
+                <ul class="mt-1.5 space-y-1 text-sm list-disc list-outside ml-4">
+                  {role.highlights.map((h) => <li>{h}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>
