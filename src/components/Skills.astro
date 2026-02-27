@@ -1,0 +1,24 @@
+---
+interface SkillGroup {
+  category: string;
+  items: string[];
+}
+
+interface Props {
+  skills: SkillGroup[];
+}
+
+const { skills } = Astro.props;
+---
+
+<section class="mt-6">
+  <h2 class="text-xs font-semibold uppercase tracking-widest text-[var(--color-muted)] dark:text-[var(--color-muted-dark)] border-b border-[var(--color-border)] dark:border-[var(--color-border-dark)] pb-2 mb-3">Skills</h2>
+  <div class="space-y-2">
+    {skills.map((group) => (
+      <div class="flex text-sm">
+        <span class="font-semibold w-28 shrink-0">{group.category}</span>
+        <span class="text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">{group.items.join(', ')}</span>
+      </div>
+    ))}
+  </div>
+</section>

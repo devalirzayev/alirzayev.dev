@@ -1,0 +1,39 @@
+---
+interface EducationItem {
+  institution: string;
+  degree: string;
+  startDate: string;
+  endDate: string;
+  note?: string;
+}
+
+interface Props {
+  education: EducationItem[];
+}
+
+const { education } = Astro.props;
+
+function formatDate(date: string): string {
+  const [year, month] = date.split('-');
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return `${months[parseInt(month) - 1]} ${year}`;
+}
+---
+
+<section class="mt-6">
+  <h2 class="text-xs font-semibold uppercase tracking-widest text-[var(--color-muted)] dark:text-[var(--color-muted-dark)] border-b border-[var(--color-border)] dark:border-[var(--color-border-dark)] pb-2 mb-3">Education</h2>
+  <div class="space-y-3">
+    {education.map((edu) => (
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+        <div>
+          <h3 class="font-semibold text-sm">{edu.degree}</h3>
+          <p class="text-sm text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">{edu.institution}</p>
+          {edu.note && <p class="text-xs italic text-[var(--color-muted)] dark:text-[var(--color-muted-dark)] mt-0.5">{edu.note}</p>}
+        </div>
+        <span class="text-xs text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">
+          {formatDate(edu.startDate)} — {formatDate(edu.endDate)}
+        </span>
+      </div>
+    ))}
+  </div>
+</section>
