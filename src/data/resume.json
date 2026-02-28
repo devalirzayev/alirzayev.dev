@@ -50,6 +50,19 @@
       ]
     },
     {
+      "company": "Planly",
+      "position": "Technical Project Manager",
+      "location": "Baku, Azerbaijan",
+      "startDate": "2022-04",
+      "endDate": "2022-12",
+      "highlights": [
+        "Managed collaboration between Product Owner and engineering team, translating product requirements into technical tasks",
+        "Planned sprints, authored and maintained documentation on Wiki/Confluence, and resolved cross-team blockers",
+        "Mentored junior and mid-level developers on engineering best practices",
+        "Automated deployment pipelines using GitLab CI, reducing manual release overhead"
+      ]
+    },
+    {
       "company": "FS Code",
       "location": "Baku, Azerbaijan",
       "roles": [
@@ -72,19 +85,6 @@
             "Containerized build processes and managed releases to a customer base of 13,000+"
           ]
         }
-      ]
-    },
-    {
-      "company": "Planly",
-      "position": "Technical Project Manager",
-      "location": "Baku, Azerbaijan",
-      "startDate": "2022-04",
-      "endDate": "2022-12",
-      "highlights": [
-        "Managed collaboration between Product Owner and engineering team, translating product requirements into technical tasks",
-        "Planned sprints, authored and maintained documentation on Wiki/Confluence, and resolved cross-team blockers",
-        "Mentored junior and mid-level developers on engineering best practices",
-        "Automated deployment pipelines using GitLab CI, reducing manual release overhead"
       ]
     },
     {
