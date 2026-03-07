@@ -1,25 +1,31 @@
 ---
-import SectionWrapper from './SectionWrapper.astro';
+import SectionWrapper from "./SectionWrapper.astro";
 
 interface SkillGroup {
-  category: string;
-  items: string[];
+    category: string;
+    items: string[];
 }
 
 interface Props {
-  skills: SkillGroup[];
+    skills: SkillGroup[];
 }
 
 const { skills } = Astro.props;
 ---
 
 <SectionWrapper title="Skills">
-  <div class="space-y-2">
-    {skills.map((group) => (
-      <div class="flex text-sm">
-        <span class="font-semibold w-28 shrink-0">{group.category}</span>
-        <span class="text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">{group.items.join(', ')}</span>
-      </div>
-    ))}
-  </div>
+    <div class="space-y-2">
+        {
+            skills.map((group) => (
+                <div class="flex text-sm">
+                    <span class="font-semibold w-28 shrink-0">
+                        {group.category}
+                    </span>
+                    <span class="text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">
+                        {group.items.join(", ")}
+                    </span>
+                </div>
+            ))
+        }
+    </div>
 </SectionWrapper>

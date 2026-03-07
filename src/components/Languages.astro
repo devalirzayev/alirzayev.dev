@@ -1,25 +1,30 @@
 ---
-import SectionWrapper from './SectionWrapper.astro';
+import SectionWrapper from "./SectionWrapper.astro";
 
 interface LangItem {
-  language: string;
-  fluency: string;
+    language: string;
+    fluency: string;
 }
 
 interface Props {
-  languages: LangItem[];
+    languages: LangItem[];
 }
 
 const { languages } = Astro.props;
 ---
 
 <SectionWrapper title="Languages">
-  <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm">
-    {languages.map((lang) => (
-      <span>
-        <span class="font-semibold">{lang.language}</span>
-        <span class="text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]"> — {lang.fluency}</span>
-      </span>
-    ))}
-  </div>
+    <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm">
+        {
+            languages.map((lang) => (
+                <span>
+                    <span class="font-semibold">{lang.language}</span>
+                    <span class="text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">
+                        {" "}
+                        — {lang.fluency}
+                    </span>
+                </span>
+            ))
+        }
+    </div>
 </SectionWrapper>

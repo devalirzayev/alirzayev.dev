@@ -1,164 +1,220 @@
 {
-  "basics": {
-    "name": "Ali Rzayev",
-    "title": "Frontend Team Lead",
-    "email": "devalirzayev@pm.me",
-    "phone": "+994 55 338 25 47",
-    "location": "Baku, Azerbaijan",
-    "website": "https://alirzayev.dev",
-    "linkedin": "https://linkedin.com/in/devalirzayev",
-    "github": "https://github.com/devalirzayev",
-    "summary": "Frontend Team Lead with 8+ years of experience building products from zero to production and scaling teams to maintain them. Led cross-functional teams of up to 5 engineers, shipped SaaS products from MVP to market, and drove large-scale legacy-to-modern refactors serving 13,000+ customers. Hands-on technical leader who pairs roadmap ownership with deep frontend expertise."
-  },
-  "experience": [
-    {
-      "company": "Clopos",
-      "location": "Baku, Azerbaijan",
-      "roles": [
+    "basics": {
+        "name": "Ali Rzayev",
+        "title": "Frontend Team Lead",
+        "email": "devalirzayev@pm.me",
+        "phone": "+994 55 338 25 47",
+        "location": "Baku, Azerbaijan",
+        "website": "https://alirzayev.dev",
+        "linkedin": "https://linkedin.com/in/devalirzayev",
+        "github": "https://github.com/devalirzayev",
+        "summary": "Frontend Team Lead with 8+ years of experience building products from zero to production and scaling teams to maintain them. Led cross-functional teams of up to 5 engineers, shipped SaaS products from MVP to market, and drove large-scale legacy-to-modern refactors serving 13,000+ customers. Hands-on technical leader who pairs roadmap ownership with deep frontend expertise."
+    },
+    "experience": [
         {
-          "position": "Team Lead | Frontend Developer",
-          "startDate": "2024-11",
-          "endDate": null,
-          "highlights": [
-            "Collaborated with CTO and CPO to define product roadmap and led the frontend team in executing it across 6 products - POS system, admin dashboard, QR menu, payment gateway, partner portal, and marketing website",
-            "Managed senior and mid-level developers - code reviews, deployments, task delegation, and sprint planning"
-          ]
+            "company": "Clopos",
+            "location": "Baku, Azerbaijan",
+            "roles": [
+                {
+                    "position": "Team Lead | Frontend Developer",
+                    "startDate": "2024-11",
+                    "endDate": null,
+                    "highlights": [
+                        "Collaborated with CTO and CPO to define product roadmap and led the frontend team in executing it across 6 products - POS system, admin dashboard, QR menu, payment gateway, partner portal, and marketing website",
+                        "Managed senior and mid-level developers - code reviews, deployments, task delegation, and sprint planning"
+                    ]
+                },
+                {
+                    "position": "Senior Front-end Developer",
+                    "startDate": "2024-07",
+                    "endDate": "2024-11",
+                    "highlights": [
+                        "Eliminated all legacy bug tickets and reduced incoming bug reports to near-zero while the customer base continued to scale",
+                        "Drove resolution of accumulated tech debt, stabilizing the product suite for a growing active user base"
+                    ]
+                }
+            ]
         },
         {
-          "position": "Senior Front-end Developer",
-          "startDate": "2024-07",
-          "endDate": "2024-11",
-          "highlights": [
-            "Eliminated all legacy bug tickets and reduced incoming bug reports to near-zero while the customer base continued to scale",
-            "Drove resolution of accumulated tech debt, stabilizing the product suite for a growing active user base"
-          ]
-        }
-      ]
-    },
-    {
-      "company": "FS Poster",
-      "position": "Team Lead | Senior Software Engineer",
-      "location": "Baku, Azerbaijan",
-      "startDate": "2023-07",
-      "endDate": "2024-07",
-      "highlights": [
-        "Led full refactor of a WordPress plugin serving 13,000+ customers from legacy jQuery/MVC/PHP to React, Vite, Module SCSS, and REST API architecture",
-        "Built a plugin extension system from scratch, enabling modular feature development and third-party integrations with 20+ APIs",
-        "Created custom rich text editor plugins for functionality not available in existing libraries",
-        "Shipped the refactored product to production in 4-5 months while maintaining the legacy version in parallel",
-        "Mentored 1 junior and 2 mid-level engineers through code reviews, documentation standards, and Git branching strategy"
-      ]
-    },
-    {
-      "company": "Planly",
-      "position": "Technical Project Manager",
-      "location": "Baku, Azerbaijan",
-      "startDate": "2022-04",
-      "endDate": "2022-12",
-      "highlights": [
-        "Managed collaboration between Product Owner and engineering team, translating product requirements into technical tasks",
-        "Planned sprints, authored and maintained documentation on Wiki/Confluence, and resolved cross-team blockers",
-        "Mentored junior and mid-level developers on engineering best practices",
-        "Automated deployment pipelines using GitLab CI, reducing manual release overhead"
-      ]
-    },
-    {
-      "company": "FS Code",
-      "location": "Baku, Azerbaijan",
-      "roles": [
-        {
-          "position": "Team Lead | Full-stack Developer",
-          "startDate": "2021-05",
-          "endDate": "2023-07",
-          "highlights": [
-            "Built Planly - a social media automation SaaS - from concept to production: assembled a team of 4 engineers (1 senior, 3 mid), co-owned the product roadmap with PO, and shipped a production-ready MVP in under 5 months",
-            "Chose and implemented the technical architecture for Planly: React with modular CSS on the frontend, C# and Go on the backend",
-            "Led both frontend and backend teams, performing code reviews across 2+ languages and managing deployments for 13,000+ plugin customers"
-          ]
+            "company": "FS Poster",
+            "position": "Team Lead | Senior Software Engineer",
+            "location": "Baku, Azerbaijan",
+            "startDate": "2023-07",
+            "endDate": "2024-07",
+            "highlights": [
+                "Led full refactor of a WordPress plugin serving 13,000+ customers from legacy jQuery/MVC/PHP to React, Vite, Module SCSS, and REST API architecture",
+                "Built a plugin extension system from scratch, enabling modular feature development and third-party integrations with 20+ APIs",
+                "Created custom rich text editor plugins for functionality not available in existing libraries",
+                "Shipped the refactored product to production in 4-5 months while maintaining the legacy version in parallel",
+                "Mentored 1 junior and 2 mid-level engineers through code reviews, documentation standards, and Git branching strategy"
+            ]
         },
         {
-          "position": "Full-stack Developer",
-          "startDate": "2020-05",
-          "endDate": "2021-05",
-          "highlights": [
-            "Built custom ORM, Query Builder, and deployment pipeline for the FS Poster WordPress plugin, ensuring compatibility across diverse server configurations",
-            "Containerized build processes and managed releases to a customer base of 13,000+"
-          ]
+            "company": "Planly",
+            "position": "Technical Project Manager",
+            "location": "Baku, Azerbaijan",
+            "startDate": "2022-04",
+            "endDate": "2022-12",
+            "highlights": [
+                "Managed collaboration between Product Owner and engineering team, translating product requirements into technical tasks",
+                "Planned sprints, authored and maintained documentation on Wiki/Confluence, and resolved cross-team blockers",
+                "Mentored junior and mid-level developers on engineering best practices",
+                "Automated deployment pipelines using GitLab CI, reducing manual release overhead"
+            ]
+        },
+        {
+            "company": "FS Code",
+            "location": "Baku, Azerbaijan",
+            "roles": [
+                {
+                    "position": "Team Lead | Full-stack Developer",
+                    "startDate": "2021-05",
+                    "endDate": "2023-07",
+                    "highlights": [
+                        "Built Planly - a social media automation SaaS - from concept to production: assembled a team of 4 engineers (1 senior, 3 mid), co-owned the product roadmap with PO, and shipped a production-ready MVP in under 5 months",
+                        "Chose and implemented the technical architecture for Planly: React with modular CSS on the frontend, C# and Go on the backend",
+                        "Led both frontend and backend teams, performing code reviews across 2+ languages and managing deployments for 13,000+ plugin customers"
+                    ]
+                },
+                {
+                    "position": "Full-stack Developer",
+                    "startDate": "2020-05",
+                    "endDate": "2021-05",
+                    "highlights": [
+                        "Built custom ORM, Query Builder, and deployment pipeline for the FS Poster WordPress plugin, ensuring compatibility across diverse server configurations",
+                        "Containerized build processes and managed releases to a customer base of 13,000+"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Freelance / Upwork",
+            "position": "Full-stack Developer",
+            "location": "Remote",
+            "startDate": "2017-01",
+            "endDate": "2020-05",
+            "highlights": [
+                "Built e-commerce platforms with product scraping from Trendyol, Amazon, and AliExpress",
+                "Delivered full-stack solutions using PHP, Python, Node.js on the backend and JavaScript/React on the frontend"
+            ]
         }
-      ]
-    },
-    {
-      "company": "Freelance / Upwork",
-      "position": "Full-stack Developer",
-      "location": "Remote",
-      "startDate": "2017-01",
-      "endDate": "2020-05",
-      "highlights": [
-        "Built e-commerce platforms with product scraping from Trendyol, Amazon, and AliExpress",
-        "Delivered full-stack solutions using PHP, Python, Node.js on the backend and JavaScript/React on the frontend"
-      ]
-    }
-  ],
-  "projects": [
-    {
-      "name": "Planly",
-      "url": "https://planly.com",
-      "description": "Social media automation SaaS - built from scratch as technical lead",
-      "highlights": [
-        "Assembled team, co-owned roadmap with PO, shipped production-ready MVP in under 5 months",
-        "Tech stack: React, Module CSS, C#, Go"
-      ]
-    },
-    {
-      "name": "FS Poster Refactor",
-      "url": "",
-      "description": "Full legacy-to-modern rewrite of a WordPress plugin with 13,000+ customers",
-      "highlights": [
-        "Migrated from jQuery/MVC/PHP to React, Vite, Module SCSS, REST API",
-        "Built custom extension system and rich text editor plugins from scratch"
-      ]
-    }
-  ],
-  "sideProjects": [
-    {
-      "name": "Frankenstein",
-      "description": "Internal AI-powered development cycle automation tool at Clopos",
-      "highlights": [
-        "Built an AI agent pipeline that reads Jira tasks, researches requirements, clarifies specs, generates implementation, and creates PRs for human review",
-        "Architected the backend with Node.js, Fastify, Redis, and BullMQ to handle webhooks and orchestrate async agent workflows",
-        "Deployed and maintained on Hetzner infrastructure"
-      ]
-    },
-    {
-      "name": "iOS Mobile App",
-      "description": "AI-powered iOS app with 3,000+ monthly active users",
-      "highlights": [
-        "Built with React Native/Expo, Firebase, Cloudflare R2, and Docker-based serverless AI inference",
-        "Designed and implemented custom UI component library from scratch",
-        "Created and open-sourced expo-keychain (npmjs.com/package/expo-keychain) - Expo module for iOS Keychain integration"
-      ]
-    }
-  ],
-  "education": [
-    {
-      "institution": "Azerbaijan State Pedagogical University",
-      "degree": "Physics Teacher",
-      "startDate": "2019-09",
-      "endDate": "2023-05",
-      "note": "Paused to focus on software engineering career"
-    }
-  ],
-  "skills": [
-    { "category": "Frontend", "items": ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind", "Redux", "Zustand", "MobX", "CSS/SCSS", "HTML"] },
-    { "category": "Backend", "items": ["PHP", "Node.js", "Go", "C#", "REST API", "MySQL", "PostgreSQL"] },
-    { "category": "Tools", "items": ["Vite", "Cypress", "Git", "Docker", "CI/CD", "GitLab CI", "Jira", "Linux"] },
-    { "category": "Other", "items": ["React Native/Expo", "WordPress", "Zod/Yup", "SVN", "AI Tools"] },
-    { "category": "Leadership", "items": ["Team Management", "Roadmap Planning", "Code Review", "Mentorship", "Sprint Planning", "Technical Documentation"] }
-  ],
-  "certifications": [],
-  "languages": [
-    { "language": "Azerbaijani", "fluency": "Native" },
-    { "language": "English", "fluency": "Professional" },
-    { "language": "Turkish", "fluency": "Limited" }
-  ]
+    ],
+    "projects": [
+        {
+            "name": "Planly",
+            "url": "https://planly.com",
+            "description": "Social media automation SaaS - built from scratch as technical lead",
+            "highlights": [
+                "Assembled team, co-owned roadmap with PO, shipped production-ready MVP in under 5 months",
+                "Tech stack: React, Module CSS, C#, Go"
+            ]
+        },
+        {
+            "name": "FS Poster Refactor",
+            "url": "",
+            "description": "Full legacy-to-modern rewrite of a WordPress plugin with 13,000+ customers",
+            "highlights": [
+                "Migrated from jQuery/MVC/PHP to React, Vite, Module SCSS, REST API",
+                "Built custom extension system and rich text editor plugins from scratch"
+            ]
+        }
+    ],
+    "sideProjects": [
+        {
+            "name": "Frankenstein",
+            "description": "Internal AI-powered development cycle automation tool at Clopos",
+            "highlights": [
+                "Built an AI agent pipeline that reads Jira tasks, researches requirements, clarifies specs, generates implementation, and creates PRs for human review",
+                "Architected the backend with Node.js, Fastify, Redis, and BullMQ to handle webhooks and orchestrate async agent workflows",
+                "Deployed and maintained on Hetzner infrastructure"
+            ]
+        },
+        {
+            "name": "iOS Mobile App",
+            "description": "AI-powered iOS app with 3,000+ monthly active users",
+            "highlights": [
+                "Built with React Native/Expo, Firebase, Cloudflare R2, and Docker-based serverless AI inference",
+                "Designed and implemented custom UI component library from scratch",
+                "Created and open-sourced expo-keychain (npmjs.com/package/expo-keychain) - Expo module for iOS Keychain integration"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Azerbaijan State Pedagogical University",
+            "degree": "Physics Teacher",
+            "startDate": "2019-09",
+            "endDate": "2023-05",
+            "note": "Paused to focus on software engineering career"
+        }
+    ],
+    "skills": [
+        {
+            "category": "Frontend",
+            "items": [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "JavaScript",
+                "Tailwind",
+                "Redux",
+                "Zustand",
+                "MobX",
+                "CSS/SCSS",
+                "HTML"
+            ]
+        },
+        {
+            "category": "Backend",
+            "items": [
+                "PHP",
+                "Node.js",
+                "Go",
+                "C#",
+                "REST API",
+                "MySQL",
+                "PostgreSQL"
+            ]
+        },
+        {
+            "category": "Tools",
+            "items": [
+                "Vite",
+                "Cypress",
+                "Git",
+                "Docker",
+                "CI/CD",
+                "GitLab CI",
+                "Jira",
+                "Linux"
+            ]
+        },
+        {
+            "category": "Other",
+            "items": [
+                "React Native/Expo",
+                "WordPress",
+                "Zod/Yup",
+                "SVN",
+                "AI Tools"
+            ]
+        },
+        {
+            "category": "Leadership",
+            "items": [
+                "Team Management",
+                "Roadmap Planning",
+                "Code Review",
+                "Mentorship",
+                "Sprint Planning",
+                "Technical Documentation"
+            ]
+        }
+    ],
+    "certifications": [],
+    "languages": [
+        { "language": "Azerbaijani", "fluency": "Native" },
+        { "language": "English", "fluency": "Professional" },
+        { "language": "Turkish", "fluency": "Limited" }
+    ]
 }

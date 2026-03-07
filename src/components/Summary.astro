@@ -1,13 +1,13 @@
 ---
-import SectionWrapper from './SectionWrapper.astro';
+import SectionWrapper from "./SectionWrapper.astro";
 
 interface Props {
-  summary: string;
+    summary: string;
 }
 
 const { summary } = Astro.props;
 ---
 
 <SectionWrapper title="Summary">
-  <p class="text-sm leading-relaxed">{summary}</p>
+    <p class="text-sm leading-relaxed">{summary}</p>
 </SectionWrapper>

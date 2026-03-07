@@ -1,14 +1,14 @@
 ---
-import SectionHeader from './SectionHeader.astro';
+import SectionHeader from "./SectionHeader.astro";
 
 interface Props {
-  title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <section class="mt-6">
-  <SectionHeader title={title} />
-  <slot />
+    <SectionHeader title={title} />
+    <slot />
 </section>

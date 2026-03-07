@@ -1,35 +1,43 @@
 ---
-import SectionWrapper from './SectionWrapper.astro';
-import { formatDate } from '../utils/formatDate';
+import SectionWrapper from "./SectionWrapper.astro";
+import { formatDate } from "../utils/formatDate";
 
 interface EducationItem {
-  institution: string;
-  degree: string;
-  startDate: string;
-  endDate: string;
-  note?: string;
+    institution: string;
+    degree: string;
+    startDate: string;
+    endDate: string;
+    note?: string;
 }
 
 interface Props {
-  education: EducationItem[];
+    education: EducationItem[];
 }
 
 const { education } = Astro.props;
 ---
 
 <SectionWrapper title="Education">
-  <div class="space-y-3">
-    {education.map((edu) => (
-      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
-        <div>
-          <h3 class="font-semibold text-sm">{edu.degree}</h3>
-          <p class="text-sm text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">{edu.institution}</p>
-          {edu.note && <p class="text-xs italic text-[var(--color-muted)] dark:text-[var(--color-muted-dark)] mt-0.5">{edu.note}</p>}
-        </div>
-        <span class="text-xs text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">
-          {formatDate(edu.startDate)} — {formatDate(edu.endDate)}
-        </span>
-      </div>
-    ))}
-  </div>
+    <div class="space-y-3">
+        {
+            education.map((edu) => (
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                    <div>
+                        <h3 class="font-semibold text-sm">{edu.degree}</h3>
+                        <p class="text-sm text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">
+                            {edu.institution}
+                        </p>
+                        {edu.note && (
+                            <p class="text-xs italic text-[var(--color-muted)] dark:text-[var(--color-muted-dark)] mt-0.5">
+                                {edu.note}
+                            </p>
+                        )}
+                    </div>
+                    <span class="text-xs text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">
+                        {formatDate(edu.startDate)} — {formatDate(edu.endDate)}
+                    </span>
+                </div>
+            ))
+        }
+    </div>
 </SectionWrapper>

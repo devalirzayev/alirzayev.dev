@@ -1,28 +1,32 @@
 ---
-import SectionWrapper from './SectionWrapper.astro';
-import BulletList from './BulletList.astro';
+import SectionWrapper from "./SectionWrapper.astro";
+import BulletList from "./BulletList.astro";
 
 interface SideProjectItem {
-  name: string;
-  description: string;
-  highlights: string[];
+    name: string;
+    description: string;
+    highlights: string[];
 }
 
 interface Props {
-  sideProjects: SideProjectItem[];
+    sideProjects: SideProjectItem[];
 }
 
 const { sideProjects } = Astro.props;
 ---
 
 <SectionWrapper title="Side Projects">
-  <div class="space-y-4">
-    {sideProjects.map((project) => (
-      <div>
-        <h3 class="font-semibold text-sm">{project.name}</h3>
-        <p class="text-sm text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">{project.description}</p>
-        <BulletList items={project.highlights} />
-      </div>
-    ))}
-  </div>
+    <div class="space-y-4">
+        {
+            sideProjects.map((project) => (
+                <div>
+                    <h3 class="font-semibold text-sm">{project.name}</h3>
+                    <p class="text-sm text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">
+                        {project.description}
+                    </p>
+                    <BulletList items={project.highlights} />
+                </div>
+            ))
+        }
+    </div>
 </SectionWrapper>
