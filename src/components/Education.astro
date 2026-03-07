@@ -1,4 +1,7 @@
 ---
+import SectionWrapper from './SectionWrapper.astro';
+import { formatDate } from '../utils/formatDate';
+
 interface EducationItem {
   institution: string;
   degree: string;
@@ -12,16 +15,9 @@ interface Props {
 }
 
 const { education } = Astro.props;
-
-function formatDate(date: string): string {
-  const [year, month] = date.split('-');
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return `${months[parseInt(month) - 1]} ${year}`;
-}
 ---
 
-<section class="mt-6">
-  <h2 class="text-xs font-semibold uppercase tracking-widest text-[var(--color-muted)] dark:text-[var(--color-muted-dark)] border-b border-[var(--color-border)] dark:border-[var(--color-border-dark)] pb-2 mb-3">Education</h2>
+<SectionWrapper title="Education">
   <div class="space-y-3">
     {education.map((edu) => (
       <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
@@ -36,4 +32,4 @@ function formatDate(date: string): string {
       </div>
     ))}
   </div>
-</section>
+</SectionWrapper>

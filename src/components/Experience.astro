@@ -1,4 +1,8 @@
 ---
+import SectionWrapper from './SectionWrapper.astro';
+import BulletList from './BulletList.astro';
+import { formatDate } from '../utils/formatDate';
+
 interface Role {
   position: string;
   startDate: string;
@@ -22,13 +26,6 @@ interface Props {
 
 const { experience } = Astro.props;
 
-function formatDate(date: string | null): string {
-  if (!date) return 'Present';
-  const [year, month] = date.split('-');
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return `${months[parseInt(month) - 1]} ${year}`;
-}
-
 function getRoles(job: ExperienceItem): Role[] {
   if (job.roles) return job.roles;
   return [{
@@ -50,8 +47,7 @@ function getOverallDates(job: ExperienceItem): { start: string; end: string | nu
 }
 ---
 
-<section class="mt-6">
-  <h2 class="text-xs font-semibold uppercase tracking-widest text-[var(--color-muted)] dark:text-[var(--color-muted-dark)] border-b border-[var(--color-border)] dark:border-[var(--color-border-dark)] pb-2 mb-3">Experience</h2>
+<SectionWrapper title="Experience">
   <div class="space-y-5">
     {experience.map((job) => {
       const roles = getRoles(job);
@@ -76,9 +72,7 @@ function getOverallDates(job: ExperienceItem): { start: string; end: string | nu
                     </span>
                   )}
                 </div>
-                <ul class="mt-1.5 space-y-1 text-sm list-disc list-outside ml-4">
-                  {role.highlights.map((h) => <li>{h}</li>)}
-                </ul>
+                <BulletList items={role.highlights} />
               </div>
             ))}
           </div>
@@ -86,4 +80,4 @@ function getOverallDates(job: ExperienceItem): { start: string; end: string | nu
       );
     })}
   </div>
-</section>
+</SectionWrapper>
