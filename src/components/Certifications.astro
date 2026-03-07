@@ -1,34 +1,37 @@
 ---
+import SectionWrapper from "./SectionWrapper.astro";
+import { formatDate } from "../utils/formatDate";
+
 interface CertItem {
-  name: string;
-  issuer: string;
-  date: string;
+    name: string;
+    issuer: string;
+    date: string;
 }
 
 interface Props {
-  certifications: CertItem[];
+    certifications: CertItem[];
 }
 
 const { certifications } = Astro.props;
-
-function formatDate(date: string): string {
-  const [year, month] = date.split('-');
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return `${months[parseInt(month) - 1]} ${year}`;
-}
 ---
 
-<section class="mt-6">
-  <h2 class="text-xs font-semibold uppercase tracking-widest text-[var(--color-muted)] dark:text-[var(--color-muted-dark)] border-b border-[var(--color-border)] dark:border-[var(--color-border-dark)] pb-2 mb-3">Certifications</h2>
-  <div class="space-y-2">
-    {certifications.map((cert) => (
-      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
-        <div>
-          <span class="font-semibold text-sm">{cert.name}</span>
-          <span class="text-sm text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]"> · {cert.issuer}</span>
-        </div>
-        <span class="text-xs text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">{formatDate(cert.date)}</span>
-      </div>
-    ))}
-  </div>
-</section>
+<SectionWrapper title="Certifications">
+    <div class="space-y-2">
+        {
+            certifications.map((cert) => (
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                    <div>
+                        <span class="font-semibold text-sm">{cert.name}</span>
+                        <span class="text-sm text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">
+                            {" "}
+                            · {cert.issuer}
+                        </span>
+                    </div>
+                    <span class="text-xs text-[var(--color-muted)] dark:text-[var(--color-muted-dark)]">
+                        {formatDate(cert.date)}
+                    </span>
+                </div>
+            ))
+        }
+    </div>
+</SectionWrapper>

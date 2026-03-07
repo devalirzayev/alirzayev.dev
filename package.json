@@ -1,17 +1,27 @@
 {
-  "name": "astro-scaffold",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@tabler/icons": "^3.37.1",
-    "@tailwindcss/vite": "^4.2.1",
-    "astro": "^5.17.1",
-    "tailwindcss": "^4.2.1"
-  }
+    "name": "astro-scaffold",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "prepare": "husky"
+    },
+    "dependencies": {
+        "@tabler/icons": "^3.37.1",
+        "@tailwindcss/vite": "^4.2.1",
+        "astro": "^5.17.1",
+        "tailwindcss": "^4.2.1"
+    },
+    "devDependencies": {
+        "husky": "^9.1.7",
+        "lint-staged": "^16.3.2",
+        "prettier": "^3.8.1",
+        "prettier-plugin-astro": "^0.14.1"
+    },
+    "lint-staged": {
+        "*.{js,ts,mjs,json,css,astro}": "prettier --write"
+    }
 }
