@@ -57,9 +57,8 @@
             "endDate": "2022-12",
             "highlights": [
                 "Managed collaboration between Product Owner and engineering team, translating product requirements into technical tasks",
-                "Planned sprints, authored and maintained documentation on Wiki/Confluence, and resolved cross-team blockers",
-                "Mentored junior and mid-level developers on engineering best practices",
-                "Automated deployment pipelines using GitLab CI, reducing manual release overhead"
+                "Planned sprints, authored and maintained documentation, and resolved cross-team blockers",
+                "Mentored junior and mid-level developers on engineering best practices"
             ]
         },
         {
@@ -121,15 +120,6 @@
     ],
     "sideProjects": [
         {
-            "name": "Frankenstein",
-            "description": "Internal AI-powered development cycle automation tool at Clopos",
-            "highlights": [
-                "Built an AI agent pipeline that reads Jira tasks, researches requirements, clarifies specs, generates implementation, and creates PRs for human review",
-                "Architected the backend with Node.js, Fastify, Redis, and BullMQ to handle webhooks and orchestrate async agent workflows",
-                "Deployed and maintained on Hetzner infrastructure"
-            ]
-        },
-        {
             "name": "iOS Mobile App",
             "description": "AI-powered iOS app with 3,000+ monthly active users",
             "highlights": [
@@ -184,7 +174,6 @@
                 "Git",
                 "Docker",
                 "CI/CD",
-                "GitLab CI",
                 "Jira",
                 "Linux"
             ]
